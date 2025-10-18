@@ -1,0 +1,25 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter notebook checkpointleri
+.ipynb_checkpoints/
+
+# Sistem dosyaları
+.DS_Store
+Thumbs.db
+
+# Sanal ortamlar
+.venv/
+env/
+venv/
+*.env
+
+# Log dosyaları
+*.log
+
+# Geçici dosyalar
+*.tmp
+*.bak

@@ -1,0 +1,71 @@
+{
+  "best_name": "CatBoost",
+  "features": [
+    "Agent/Sample(g/g)",
+    "Soaking_Time(min)",
+    "Soaking_Temp(K)",
+    "Activation_Time(min)",
+    "Activation_Temp(K)",
+    "Activation_Heating_Rate (K/min)",
+    "BET_Surface_Area(m2/g)",
+    "Total_Pore_Volume(cm3/g)",
+    "Micropore_Volume(cm3/g)",
+    "Average_Pore_Diameter(nm)",
+    "pHpzc",
+    "C_molar",
+    "H_C_molar",
+    "O_C_molar",
+    "N_C_molar",
+    "S_C_molar",
+    "Initial_Concentration(mg/L)",
+    "Solution_pH",
+    "Temperature(K)",
+    "Agitation_speed(rpm)",
+    "Dosage(g/L)",
+    "Contact_Time(min)",
+    "E",
+    "S",
+    "A",
+    "B",
+    "V",
+    "Activation_Atmosphere"
+  ],
+  "target": "qe(mg/g)",
+  "saved_at": "20251016_212905",
+  "hpo_top2": [
+    "XGBoost-GBTree",
+    "CatBoost"
+  ],
+  "hpo_metric": "r2",
+  "hpo_cv": 5,
+  "oof_from": "post-HPO on X_all",
+  "best_params": {
+    "reg__n_estimators": 1500,
+    "reg__learning_rate": 0.07196856730011518,
+    "reg__depth": 10
+  },
+  "hp_results": [
+    {
+      "model": "XGBoost-GBTree",
+      "cv_r2": 0.9838859835302672,
+      "best_params": {
+        "reg__subsample": 0.8,
+        "reg__reg_lambda": 0.0001668100537200059,
+        "reg__n_estimators": 400,
+        "reg__max_depth": 7,
+        "reg__learning_rate": 0.026826957952797246,
+        "reg__colsample_bytree": 1.0,
+        "reg__booster": "gbtree"
+      }
+    },
+    {
+      "model": "CatBoost",
+      "cv_r2": 0.9849067409477922,
+      "best_params": {
+        "reg__n_estimators": 1500,
+        "reg__learning_rate": 0.07196856730011518,
+        "reg__depth": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+
+# --- Core scientific packages ---
+numpy          # Sayısal hesaplamalar için
+pandas         # Veri işleme ve tablo yönetimi
+matplotlib     # Görselleştirme
+scikit-learn   # Makine öğrenmesi, CV, metrikler, preprocessing
+scipy          # Ek istatistiksel hesaplamalar
+joblib         # Paralel işlem desteği
+openpyxl       # Excel dosyaları (.xlsx) için gerekli
+
+# --- Optional ML libraries (estimators.py'de opsiyonel olarak kullanılanlar) ---
+catboost       # CatBoost modelleri
+lightgbm       # LightGBM modelleri
+xgboost        # XGBoost modelleri
+interpret      # ExplainableBoostingRegressor (EBM) için
